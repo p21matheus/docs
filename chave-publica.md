@@ -16,6 +16,11 @@ $ sudo ssh-keygen -f id_rsa
 ```
 Será solicitado a senha para sua chave, deixe em branco para conexão direta ou digite uma senha. Caso use uma senha, todas as vezes que tentar acessar o servidor remoto com sua chave, esta senha será solicitada.
 
+Conceda permissão para leitura/execução da chave gerada
+```sh
+$ sudo chmod +rx ~/.ssh/id_rsa
+```
+
 ### Autorização no servidor
 
 Para conexão direta com o servidor, você deverá acessar o servidor destino e navegar até a pasta do usuário que você irá autorizar a chave pública, por exemplo:
