@@ -18,7 +18,7 @@ Será solicitado a senha para sua chave, deixe em branco para conexão direta ou
 
 Conceda permissão para leitura/execução da chave gerada
 ```sh
-$ sudo chmod +rx ~/.ssh/id_rsa
+$ sudo chmod +rx id_rsa
 ```
 
 ### Autorização no servidor
