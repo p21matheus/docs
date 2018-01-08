@@ -1,4 +1,4 @@
-# Comandos úteis para Linux
+# Configurar um novo servidor web
 
 ### Instalar PHP5.6, Apache2 e MySQL Server
 
