@@ -31,7 +31,7 @@ Navegue até a pasta do usuário e altere o arquivo `.ssh/authorized_keys`
 $ cd ~/.ssh/
 sudo vim authorized_keys
 ```
-Após abrir o arquivo para edição, pressione a tecla `i` para entrar no modo -- INSERT -- do VIM e cole o conteúdo do arquivo `id_rsa.pub` gerado anteriormente.
-Aperte `ESC` para sair do mnodo -- INSERT -- e digite o comando `:x` e pressione enter. O arquivo será fechado e salvo.
+Após abrir o arquivo para edição, pressione a tecla `i` para entrar no modo insert do vim e cole o conteúdo do arquivo `id_rsa.pub` gerado anteriormente.
+Aperte `ESC` para sair do mnodo insert e digite o comando `:x` e pressione enter. O arquivo será fechado e salvo.
 
 Desconecte-se do servidor e tente novamente, a conexão deverá ser realizada sem a utilização da senha. Caso você tenha gerado sua chave pública utilizando uma senha, esta senha deverá ser informada todas as vezes que você realizar a conexão.
