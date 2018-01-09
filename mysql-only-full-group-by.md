@@ -34,7 +34,7 @@ STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUB
 Abra o arquivo de configuração que localizamos anteriormente (`/etc/mysql/my.cnf`) e insira a linha abaixo no trecho `[mysqld]`
 ```bash
 [mysqld]
-# podem existir outras configurações aqui, coloque apenas a linha abixo caso necessário
+# podem existir outras configurações aqui, coloque apenas a linha abaixo caso necessário
 sql_mode = "STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
 ```
 Salve, feche, e reinicie o MySQL
