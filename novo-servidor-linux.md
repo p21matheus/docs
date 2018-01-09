@@ -24,6 +24,10 @@ Instale o Apache2.4 utilizando o comando abaixo
 ```sh
 $ sudo apt-get install apache2
 ```
+Ative o mod_rewrite
+```sh
+sudo a2enmod rewrite
+```
 Para iniciar, digite
 ```sh
 $ sudo service apache2 start
