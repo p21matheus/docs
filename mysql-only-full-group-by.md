@@ -42,3 +42,9 @@ Salve, feche, e reinicie o MySQL
 $ sudo service mysql restart
 ```
 Voilà, você agora alterou permamentemente o modo do SQL :)
+
+# TLDR;
+```sql
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+```
+Dessa forma, você poderá trabalhar normalmente até que o servidor seja reiniciado.
