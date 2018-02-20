@@ -4,7 +4,11 @@
 
 Navegue até a pasta onde está o arquivo de backup e digite o comando abaixo, se atentando para o nome do arquivo
 ```sh
-$ sudo cat backup.sql | sed -e '/^-- Table structure for table .logtransacao./,/^UNLOCK TABLES;/d' | sed -e '/^-- Table structure for table .logtransmissaoarquivo./,/^UNLOCK TABLES;/d' | mysql -uroot -p"root"
+$ cat backup.sql | sed -e '/^-- Table structure for table .logtransacao./,/^UNLOCK TABLES;/d' | sed -e '/^-- Table structure for table .logtransmissaoarquivo./,/^UNLOCK TABLES;/d' | mysql -uroot -p"root"
+```
+Se for um backup compactado, execute
+```sh
+$ gunzip -c backup.gz | sed -e '/^-- Table structure for table .logtransacao./,/^UNLOCK TABLES;/d' | sed -e '/^-- Table structure for table .logtransmissaoarquivo./,/^UNLOCK TABLES;/d' | mysql -uroot -p"root"
 ```
 
 O backup será restaurado sem as tabelas de logs. Após conclusão da restauração, executar as seguintes queries.
