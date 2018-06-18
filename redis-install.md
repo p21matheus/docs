@@ -34,4 +34,10 @@ Reinicie o servidor apache e teste sua aplicação.
 $ service apache2 restart
 ```
 
+Iniciando Redis
+
+```
+redis-server --daemonize yes
+```
+
 All done :)
