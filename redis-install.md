@@ -37,7 +37,7 @@ $ service apache2 restart
 Iniciando Redis
 
 ```
-redis-server --daemonize yes
+$ redis-server --daemonize yes
 ```
 
 All done :)
