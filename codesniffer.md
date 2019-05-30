@@ -4,7 +4,7 @@ no Ubuntu execute os seguintes comandos, para instalar o codesniffer
 
 `$ sudo composer global require "phpcompatibility/php-compatibility=*"`
 
-`$ vim /home/jerfeson/.bashrc`
+`$ vim /home/$SEU_USUARIO/.bashrc`
 
 Add ao final do arquivo
 
@@ -16,7 +16,7 @@ export APP_ENV=desenvolvimento
 
 salve e saia, execute o comando abaixo
 
-`$ source /home/jerfeson/.bashrc`
+`$ source /home/$SEU_USUARIO/.bashrc`
 
 configure o php-compatibility no phpcs
 
