@@ -1,6 +1,7 @@
 no Ubuntu execute os seguintes comandos, para instalar o codesniffer
 
 `
+
 #!/bin/sh
 
 name=$(whoami)
@@ -18,9 +19,7 @@ source /home/"$name"/.bashrc
 
 phpcs --config-set installed_paths /home/"$name"/.composer/vendor/phpcompatibility/php-compatibility/
 
-phpcs -i
-
-`
+phpcs -i` 
 
 o resultado deve ser proximo ao abaixo.
 
