@@ -14,7 +14,9 @@ composer global require "phpcompatibility/php-compatibility=*"
 
 
 echo "## Custom
+
 export PATH=$composerHome/vendor/bin:"'$PATH'"
+
 export APP_ENV=desenvolvimento " >> /home/"$name"/.bashrc
 
 
