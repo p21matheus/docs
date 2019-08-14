@@ -1,30 +1,26 @@
 no Ubuntu execute os seguintes comandos, para instalar o codesniffer
 
-`$ sudo composer global require "squizlabs/php_codesniffer=*"`
+`
+#!/bin/sh
 
-`$ sudo composer global require "phpcompatibility/php-compatibility=*"`
+name=$(whoami)
+composerHome=$(composer config home --global)
 
-`$ vim /home/$SEU_USUARIO/.bashrc`
+composer global require "squizlabs/php_codesniffer=*"
+composer global require "phpcompatibility/php-compatibility=*"
 
-Add ao final do arquivo
 
-```bash
-## Custom
-export PATH=~/.composer/vendor/bin:$PATH
-export APP_ENV=desenvolvimento
-```
+echo "## Custom
+export PATH=$composerHome/vendor/bin:"'$PATH'"
+export APP_ENV=desenvolvimento " >> /home/"$name"/.bashrc
 
-salve e saia, execute o comando abaixo
+source /home/"$name"/.bashrc
 
-`$ source /home/$SEU_USUARIO/.bashrc`
+phpcs --config-set installed_paths /home/"$name"/.composer/vendor/phpcompatibility/php-compatibility/
 
-configure o php-compatibility no phpcs
+phpcs -i
 
-`$ phpcs --config-set installed_paths /home/user/.composer/vendor/phpcompatibility/php-compatibility/`
-
-Certifique a instalação com o comando
-
-`$ phpcs -i`
+`
 
 o resultado deve ser proximo ao abaixo.
 
