@@ -4,7 +4,7 @@ pipeline {
     stage('') {
       steps {
         script {
-          def browsers = $( echo "cra/master" |awk '{print substr($1,0,4)}')
+          def browsers = $( echo 'cra/master' |awk '{print substr($1,0,4)}')
             echo "Testing the ${browsers} browser"
         }
       }
