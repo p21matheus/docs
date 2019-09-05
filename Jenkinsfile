@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('') {
       steps {
-        sh 'echo ${PROMOTED_JOB_NAME}'
+        sh 'echo ${JOB_BASE_NAME}'
       }
     }
   }
