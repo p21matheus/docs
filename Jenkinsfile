@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('') {
       steps {
-        sh 'echo ${env.GIT_URL}'
+        sh 'echo ${GIT_URL}'
       }
     }
   }
