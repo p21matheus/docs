@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('') {
       steps {
-        sh 'echo proj_name'
+        sh 'echo ${proj_name}'
       }
     }
   }
