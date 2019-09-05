@@ -4,8 +4,8 @@ pipeline {
     stage('') {
       steps {
         script {
-          def browsers = ['chrome', 'firefox']
-            echo "Testing the ${browsers[i]} browser"
+          def browsers = "aa"
+            echo "Testing the ${browsers} browser"
         }
       }
     }
