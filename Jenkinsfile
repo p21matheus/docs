@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('') {
       steps {
-        sh 'echo ${JOB_NAME:0:3}'
+        sh 'projectName = ${JOB_NAME} | awk '{print $3}'
+        sh 'echo projectName'
       }
     }
   }
