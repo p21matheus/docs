@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('') {
       steps {
-        sh 'projectName = ${JOB_NAME} | awk '{print $3}'
-        sh 'echo projectName'
+        sh 'val=$( echo "cra/master" $len|awk '{print substr($1,0,4)}')'
+        sh 'echo $val'
       }
     }
   }
