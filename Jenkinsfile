@@ -1,11 +1,9 @@
-def jobnameparts = JOB_NAME.tokenize('/') as String[]
-def jobconsolename = jobnameparts[0]
 pipeline {
   agent any
   stages {
     stage('') {
       steps {
-        sh 'echo ${jobconsolename}'
+        sh 'echo ${JOB_NAME:0:3}'
       }
     }
   }
