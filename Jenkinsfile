@@ -1,12 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         script {
           sh browsers=echo ${JOB_NAME} | awk '{print substr($1,0,4)}'
-          echo "Testing the ${browsers} browser"
         }
+
       }
     }
   }
