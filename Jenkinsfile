@@ -3,12 +3,8 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''browsers=echo ${JOB_NAME} | awk \'{print substr($1,0,4)}\'
-&& 
-
-
-
-          echo "Testing the ${browsers} browser"'''
+        sh '''browsers=$(echo "CRA/TESE" | awk \'{print substr($1,0,4)}\') && echo ${browsers}
+'''
       }
     }
   }
