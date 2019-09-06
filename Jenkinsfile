@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'browsers=$(echo "${JOB_NAME}" | awk \'{print substr($1,0,3)}\') && echo ${browsers}'
+        sh 'browsers=$(echo "${JOB_NAME}" | awk \'{print substr($1,0,3)}\')'
+        sh 'echo ${browsers}'
       }
     }
   }
