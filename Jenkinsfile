@@ -10,6 +10,8 @@ pipeline {
                     } else {
                       echo 'things and stuff'
                     }
+                 } else {
+                    echo 'things and stuff'
                  }
             }
           }
