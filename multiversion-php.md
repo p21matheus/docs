@@ -1,4 +1,4 @@
-# Confgurando versões diferentes do php de acordo com o virtualhost
+# Confgurando versões diferentes do php de acordo com o vHost
 
 ### Instale o môdulo php-fpm das respectivas versões do php;
 
