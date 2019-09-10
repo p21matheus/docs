@@ -22,7 +22,7 @@ sudo apt remove remove libapache2-mod-php7.3
 a2enmod actions fastcgi alias proxy_fcgi mpm_worker 
 ```
 
-### Insiera a seguinte linha no seu vhost, de acordo com a versão que deseja configurar 
+### Insira a seguinte linha no seu vhost, de acordo com a versão que deseja configurar 
 
 ```Include "conf-available/php5.6-fpm.conf"```
 ou
