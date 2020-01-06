@@ -4,6 +4,11 @@
 ```sh
 $ apt-get install redis-server
 ```
+Fedora
+```sh
+$ yum install redis -y  
+```
+
 ### Instale a extensão do Redis para PHP
 ```sh
 $ apt-get install php-redis
@@ -33,11 +38,20 @@ Reinicie o servidor apache e teste sua aplicação.
 ```sh
 $ service apache2 restart
 ```
+Fedora
+
+```sh
+$ service httpd restart
+```
 
 Iniciando Redis
 
 ```
 $ redis-server --daemonize yes
+```
+Fedora
+```
+$ service redis start
 ```
 
 All done :)
