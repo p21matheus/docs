@@ -10,7 +10,7 @@ composer global require phpmd/phpmd=*
 Inseria o seguinte trecho de código ao final do seguinte arquivo: ```/home/SEU_USUARIO/.bashrc```
 ```
 ## Custom
-export PATH=/home/SEU_USUARIO/.composer/vendor/bin:"'$PATH'"
+export PATH=/home/SEU_USUARIO/.composer/vendor/bin:$PATH
 export APP_ENV=desenvolvimento
 ```
 
