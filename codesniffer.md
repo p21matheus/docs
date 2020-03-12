@@ -1,32 +1,37 @@
-no Ubuntu execute os seguintes comandos, para instalar o codesniffer
+no Ubuntu execute os seguintes comandos, para instalar o codesniffer, phpmd, php compabolity e php cs fixer 
 
 ```
+composer global require squizlabs/php_codesniffer=*
+composer global require phpcompatibility/php-compatibility=*
+composer global require friendsofphp/php-cs-fixer=*
+composer global require phpmd/phpmd=*
+```
 
-#!/bin/sh
+Inseria o seguinte trecho de código ao final do seguinte arquivo: ```/home/SEU_USUARIO/.bashrc```
+```
+## Custom
+export PATH=/home/SEU_USUARIO/.composer/vendor/bin:"'$PATH'"
+export APP_ENV=desenvolvimento
+```
 
-name=$(whoami)
+Execite p seguinte comando
 
-composerHome=$(composer config home --global)
+```
+source /home/SEU_USUARIO/.bashrc
+```
 
-composer global require "squizlabs/php_codesniffer=*"
+Faça a configuração do PHP CS
 
-composer global require "phpcompatibility/php-compatibility=*"
+```
+phpcs --config-set installed_paths /home/SEU_USUARIO/.composer/vendor/phpcompatibility/php-compatibility/
+```
 
+Verifique a configuração
 
-echo "## Custom
+```
+phpcs -i 
+```
 
-export PATH=$composerHome/vendor/bin:"'$PATH'"
-
-export APP_ENV=desenvolvimento " >> /home/"$name"/.bashrc
-
-
-source /home/"$name"/.bashrc
-
-
-phpcs --config-set installed_paths /home/"$name"/.composer/vendor/phpcompatibility/php-compatibility/
-
-
-phpcs -i ```
 
 o resultado deve ser proximo ao abaixo.
 
@@ -34,12 +39,36 @@ o resultado deve ser proximo ao abaixo.
 
 ## IDE (PHPSTORM)
 
-Configura o codesniffer com phpremoto no phpstorm, lembrar de configurar seu SSH no subsistema, utilizando o aquivo md desse repositório até o passo 4
+Configurando seu php storm
 
-Configure o mapeamento do projeto e do codesniffer
+No menu de configurações da sua IDE acesse o seguinte caminho.
 
-PASTA NO WINDOWS, PASTA NO LINUX (`/mnt/f/p21/sistemas/web/apache/cra`)
+``` Languages & Frameworks -> php -> PHP ```
 
-PHPCODESNIFFER PATH (PHPSTORM)
+Selecione a sua configução de CLI do seu php
 
-`/home/usuario/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs`
+Ainda na configuração do php acesse
+
+``` Languages & Frameworks -> php -> Quality Tools ```
+
+Edite a configuração e localize as instações das bibliotecas citadas, que devem estar no seguinte caminho
+
+### PHP_CodeSniffer & PHP Code Beautifier
+
+```
+/home/SEU_USUARIO/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs
+/home/SEU_USUARIO/.composer/vendor/squizlabs/php_codesniffer/bin/phpcbf
+```
+
+### Mess Detector
+
+```
+/home/SEU_USUARIO/.composer/vendor/phpmd/phpmd/src/bin/phpmd
+```
+
+### PHP CS Fixer
+
+```
+/home/SEU_USUARIO/.composer/vendor/bin/php-cs-fixer
+```
+
