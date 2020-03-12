@@ -72,3 +72,7 @@ Edite a configuração e localize as instações das bibliotecas citadas, que de
 /home/SEU_USUARIO/.composer/vendor/bin/php-cs-fixer
 ```
 
+Ainda nas configurações, altere a seguinte fonriguação de acordo com o seu critérios
+
+``` Editor -> Inspections -> Quality Tools ```
+
