@@ -1,4 +1,4 @@
-#Como configurar as chaves DKIM do servidor de email
+# Como configurar as chaves DKIM do servidor de email
 
 O DomainKeys Identified Mail (DKIM) é um processo usado para validar emails, impedindo que alguém envie emails de spam 
 usando um endereço de email não autorizado. 
@@ -72,7 +72,7 @@ SEU_SELETOR._domainkey.SEUDOMINIO.COM k=rsa; p=SUA CHAVE PUBLICA
 
 NOTA!! Tenha ciencia de que a chave pública é uma cadeia longa sem espaços em branco ou quebras de linha. A ferramenta SSL gerará o arquivo com quebras de linha, portanto, remova todas.
 
-##PASSO 3 Enviando a chave privada com um email
+## PASSO 3 Enviando a chave privada com um email
 
 Esta parte depende muito da sua linguagem de programação e do cliente de email que você está usando com essa linguagem de programação.
 
