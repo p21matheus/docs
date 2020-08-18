@@ -1,0 +1,37 @@
+Todos os agendamentos estão no diretório /aws-build/CRON/.ebextensions/03-execucao-cron.config
+
+### Exclusao de arquivos de autorizacao temporarios
+Diariamente às 00h00
+0 0 * * * webapp /home/cra/www/cra/auto/temp_autorizacao.sh >> /home/cra/logs/exclusao_temp_autorizacao.log
+
+### Exclusao de arquivos temporarios
+Diariamente às 00h00
+0 0 * * * webapp /home/cra/www/cra/auto/temp_cra.sh >> /home/cra/logs/exclusao_temp.log
+
+### Dump das bases dos bancos para o S3
+Todo sábado às 20h00
+00 20 * * 6 root /mnt/mysql.backup/mysql_backup.sh >> /mysql.backup/backup.log
+
+### Executar sync dos dados das pastas dados1, 2, 3 e 4 para o bucket p21-bkp-arquivos do S3
+Diariamente às 20h00
+00 20 * * * root /mnt/sh/sync1.sh >> /mnt/sh/sync.log
+
+### DownSize do ambiente CRA21-app-prod
+De segunda a sexta às 19h10
+10 19 * * 1-5 root /mnt/sh/beanstalk/CRA21-app-prod-DownSize.sh >> /mnt/sh/beanstalk/logs/CRA21-app-prod-DownSize.log
+
+### UpSize do ambiente CRA21-app-prod
+De segunda a sexta às 05h30
+30 05 * * 1-5 root /mnt/sh/beanstalk/CRA21-app-prod-UpSize.sh >> /mnt/sh/beanstalk/logs/CRA21-app-prod-UpSize.log
+
+### Clean Beanstalk Versions
+Diariamente às 23h00
+00 23 * * * root /mnt/sh/beanstalk_clean_versions.sh >> /mnt/sh/logs/beanstalk_clean_versions.log
+
+### Remove DB instance dbp21app3-reader from dbp21app3-cluster
+Diariamente às 19h00
+00 19 * * * root /mnt/sh/aurora/remove-dbp21app3-reader.sh >> /mnt/sh/aurora/remove-dbp21app3-reader.log
+
+### Add DB instance dbp21app3-reader from dbp21app3-cluster
+Diariamente às 07h00
+00 07 * * * root /mnt/sh/aurora/create-dbp21app3-reader.sh >> /mnt/sh/aurora/create-dbp21app3-reader.log
